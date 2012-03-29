@@ -11,3 +11,13 @@ if defined? Mongoid
     field :name, :type => String
   end
 end
+
+if defined? MongoMapper
+  class User
+    include MongoMapper::Document
+
+    key :name, :type => String
+    
+    timestamps!
+  end
+end
